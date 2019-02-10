@@ -17,6 +17,7 @@ io\swagger\Swagger2SpringBoot.class
 com\upgrad\quora\api\model\SignupUserRequest.class
 io\swagger\Swagger2SpringBoot$ExitException.class
 com\upgrad\quora\api\controller\UserController.class
+com\upgrad\quora\api\exception\RestExceptionHandler.class
 com\upgrad\quora\api\rest\ApiException.class
 com\upgrad\quora\api\rest\NotFoundException.class
 com\upgrad\quora\api\model\QuestionEditRequest.class

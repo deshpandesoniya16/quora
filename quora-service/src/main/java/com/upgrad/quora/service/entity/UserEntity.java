@@ -10,10 +10,24 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 
+
+
+/**
+ * This is UserEntity class for mapping with USERS Table
+ */
+
 @Entity
 @Table(name = "USERS")
+
+//Used these named Queries in UserDao class
+@NamedQueries({
+        @NamedQuery(name="userByUserName" , query="select u from UserEntity u where u.userName = :userName"),
+        @NamedQuery(name = "userByEmail",query = "select u from UserEntity u where u.email=:email")
+})
 public class UserEntity  implements Serializable {
 
+
+    //declared the properties as columns of Users Table
     @Id
     @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -69,6 +83,8 @@ public class UserEntity  implements Serializable {
     @Size(max = 50)
     private String contactNumber;
 
+
+    //Getters and Setters for UserEntity Properties
     public long getId() {
         return id;
     }
